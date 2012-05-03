@@ -1,0 +1,20 @@
+<h1>Edit user</h1>
+
+<%= form_for(@user) do |f| %>
+                            
+<!-- the argument :f below is to pass the f into the partial -->
+<%= render 'fields', :f => f%>
+
+<div class="actions">
+  <%= f.submit "Update"%>
+</div>
+
+<% end %> 
+
+<div>
+	 <%= gravatar_for @user%>     
+	 <a href = "http://gravatar.com/emails" target="_blank">change</a>
+</div>
+<div id="link_form">
+	<%= render 'fb_link_form'%>
+</div>

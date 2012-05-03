@@ -1,0 +1,23 @@
+
+#generation
+rails generate integration_test test_name 
+   
+#db tasks
+rake db:migrate
+rake db:test:prepare   
+rake db:reset    
+rake db:populate
+
+#add field to db
+rails generate migration add_admin_to_users \
+> admin:boolean
+
+#generate model
+rails generate model Product name:string description:text
+
+git_commands.txt
+
+tail -f logs/test.log
+
+heroku rake db:reset
+heroku rake db:create

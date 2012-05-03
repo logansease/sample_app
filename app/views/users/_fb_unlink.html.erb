@@ -1,0 +1,15 @@
+
+<%= form_tag fb_unlink_user_path, {:name=>'unlink_form'}  do %>
+  <%= hidden_field_tag :fb_user_id, "" %>
+<div id="fb-root"></div>    
+<p>
+<div class="fb-login-button" onclick="document.unlink_form.submit();">Unlink from Facebook</div>
+</p>
+<% end %>
+
+<%= form_for(current_user.fb_connections.build, :html => {:name => 'fb_friend_load_form' }) do |f| %>
+
+	<div class="fb-login-button" onclick="document.fb_friend_load_form.submit();">Load Fb Friends</div>
+
+<% end%>
+

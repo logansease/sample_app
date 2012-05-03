@@ -1,0 +1,16 @@
+git fetch    -- get updated list of all remote branches
+git checkout --track -b maps2 origin/maps2   create remote branch            (doesn't work)
+git push -u origin [branch]  -- create remote branch
+git branch -r    -- see remote branches
+git branch -d [branch] - delete local branch
+git checkout [branch] move to new branch
+git commit --amend   -- add to previous commit
+
+git merge experimental -- merge experimental into current branch
+
+push a branch other than master to heroku
+git push heroku [other branch]:master
+
+
+create a second heroku app
+heroku create --remote [other heroku name]

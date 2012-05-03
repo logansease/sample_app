@@ -1,0 +1,10 @@
+<%=  render "shared/fb" %>
+<h1>Sign up</h1>
+
+<p>
+	<div id="fb-root"></div>   
+<div class="fb-registration" 
+        data-fields="[{'name':'name'}, {'name':'email'}]" 
+        data-redirect-uri="<%= root_url %>users/create_fb">
+</div>	
+</p>

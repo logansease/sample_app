@@ -1,0 +1,9 @@
+
+	 <div id="follow_form">
+		 <% if current_user.fb_user_id %>
+			<%= render 'fb_unlink'%>
+		 <% else%>
+			<%= render 'fb_link'%>
+		 <%end%>
+	  </div>
+	

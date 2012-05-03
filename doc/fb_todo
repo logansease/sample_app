@@ -1,0 +1,15 @@
+TODO
+
+add FB button to header- only show if not logged in
+when click on fb button- log in through fb
+				- after fb log in, see if user with fb id is found in db
+				- make unique index on fb user
+				- if no user is found, redirect to fb _registration page
+				- if found, verify user and log in
+				- after fb registration, log the user in
+				- add a link / unlink button to account settings
+				- under acct settings, if the user has a fb_id, add unlink button
+				- create unlink action which will clear id
+				- if no fb_id, add link button
+				- when click on fb link button, post to link action
+				- link action will verify fb cookie and then update fb_id and save
