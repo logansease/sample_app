@@ -1,0 +1,106 @@
+/* Generic context menu styles */
+.contextMenu {
+        position: absolute;
+        z-index: 99999;
+        border: solid 1px #CCC;
+        background: #EEE;
+        padding: 0px;
+        margin: 0px;
+        display: none;
+        width: 200px;
+}
+
+.contextMenu LI {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+}
+
+.contextMenu A {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        line-height: 20px;
+        height: 20px;
+        background-position: 6px center;
+        background-repeat: no-repeat;
+        outline: none;
+        /*padding: 1px 5px;
+        padding-left: 28px;*/
+}
+
+.contextMenu LI.hover A {
+        color: #FFF;
+        background-color: #3399FF;
+}
+
+.contextMenu LI.disabled A {
+        color: #AAA;
+        cursor: default;
+}
+
+.contextMenu LI.hover.disabled A {
+        background-color: transparent;
+}
+
+.contextMenu LI.separator {
+        border-top: solid 1px #CCC;
+}
+
+.pathSelector{
+    padding:0px;
+    margin:0px;
+    border-spacing:0px;
+    border-collapse:collapse;
+    border-left: 1px solid #E1E1E1;
+}
+
+.pathSelector .arrowButton, .pathSelector .level{
+    border-right: solid 1px #E1E1E1;
+    border-top: solid 1px #E1E1E1;
+    border-bottom: solid 1px #E1E1E1;
+    border-collapse: collapse;
+}
+
+.pathSelector a{
+    color:black;
+    text-decoration:none;
+    width:100%;
+}
+
+.pathSelector .level{
+    border-collapse:collapse;
+}
+
+.pathSelector .level a:hover{
+
+}
+
+.pathSelector .arrowButton a{
+    padding:0px;
+    background-image:url("arrowrgt.gif");
+    background-position:center;
+    background-repeat:no-repeat;
+    border:none;
+    width:13px;
+    height:100%;
+    display:inline-block;
+    color:white;
+}
+
+.pathSelector .arrowButton .pressed{
+    background-image:url("arrowdwn.gif");
+    color: #cfe2f5;
+}
+
+.pathSelector .arrowButton a:hover{
+    color: #cfe2f5;
+}
+
+.pathSelector a:hover{
+    background-color: #daedd0;
+}
+
+.pathLevel:hover{
+
+}

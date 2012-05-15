@@ -53,8 +53,13 @@ class SessionsController < ApplicationController
       #since as noted below we are not moving to a new request
       render 'new'  #note this is not a new request
     else
-      sign_in user
-      redirect_back_or(user) #helper mtd
+      if !user.activated
+        session['activate_id'] = user.id
+        redirect_to '/users/send_activation'
+      else
+        sign_in user
+        redirect_back_or(user) #helper mtd
+      end
     end
   end
   

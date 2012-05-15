@@ -20,10 +20,23 @@
 
 <% end %>
 
-<div id="fb-root"></div>    
-<p>
-<div class="fb-login-button" onclick="Fb_Login();"></div>
-</p>
-
-          
+<p>Forgotten <%= link_to "Password?", "#", :onclick => "$('#new_link_modal').modal('show');" %></p>
 <p> <%= link_to "Sign up now", signup_path %></p>
+
+
+<div id="new_link_modal" class="modal hide fade">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Password recovery</h3>
+    </div>
+    <div class="modal-body">
+        <p>Enter your account email address.</p>
+
+    <%= form_tag("/users/send_password_recovery", :method => "post") do %>
+      <div class="field">
+          <%= text_field_tag(:email) %>
+          <%= submit_tag("Go") %>
+      </div>
+      <% end %>
+    </div>
+</div>

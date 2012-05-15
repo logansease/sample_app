@@ -13,6 +13,10 @@ SampleApp::Application.routes.draw do
       get :following, :followers       #makes users/1/following and following_user_path
     end
     collection do
+      post :send_password_recovery
+      get :password_recovery
+      get :activate
+      get :send_activation
       post :create_fb
       get :new_fb
     end

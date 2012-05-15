@@ -16,6 +16,7 @@ module SessionsHelper
   def sign_in(user)
     cookies.permanent.signed[:remember_token] = [user.id, user.salt] 
     current_user = user
+    current_user.update_attribute(:recover_password,false)
   end
 
   def fb_access_token
